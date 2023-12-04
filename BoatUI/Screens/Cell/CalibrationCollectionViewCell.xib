@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalibrationCollectionViewCell" id="gTV-IL-0wX" customClass="CalibrationCollectionViewCell" customModule="BoatUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="190" height="275"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="190" height="275"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wd0-4X-5TA">
+                        <rect key="frame" x="0.0" y="0.0" width="190" height="238"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jnm-fh-p7K">
+                        <rect key="frame" x="0.0" y="260" width="190" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="v3N-vK-hLt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.68235294120000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Jnm-fh-p7K" firstAttribute="trailing" secondItem="Wd0-4X-5TA" secondAttribute="trailing" id="2Xm-sc-UAa"/>
+                <constraint firstItem="Jnm-fh-p7K" firstAttribute="top" secondItem="Wd0-4X-5TA" secondAttribute="bottom" constant="22" id="7Pv-jA-sU7"/>
+                <constraint firstAttribute="bottom" secondItem="Jnm-fh-p7K" secondAttribute="bottom" id="Ah2-vv-Yla"/>
+                <constraint firstItem="Wd0-4X-5TA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Anf-y7-kfp"/>
+                <constraint firstItem="Jnm-fh-p7K" firstAttribute="leading" secondItem="Wd0-4X-5TA" secondAttribute="leading" id="KMT-HZ-AnO"/>
+                <constraint firstItem="Wd0-4X-5TA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gdj-Yr-rha"/>
+                <constraint firstAttribute="trailing" secondItem="Wd0-4X-5TA" secondAttribute="trailing" id="wh9-SF-Zdb"/>
+            </constraints>
+            <size key="customSize" width="154" height="215"/>
+            <connections>
+                <outlet property="calibrationImage" destination="Wd0-4X-5TA" id="oeY-Gr-J3E"/>
+                <outlet property="calibrationLabel" destination="Jnm-fh-p7K" id="7lw-Wc-h9Y"/>
+            </connections>
+            <point key="canvasLocation" x="-53.435114503816791" y="63.380281690140848"/>
+        </collectionViewCell>
+    </objects>
+</document>
