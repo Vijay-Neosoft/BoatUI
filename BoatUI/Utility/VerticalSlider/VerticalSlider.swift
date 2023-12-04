@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol VSSliderDelegate: AnyObject {
+    func sliderValueChanged(newValue: Float)
+}
+
+
 @IBDesignable
 public class VSSlider: UIControl {
     
     private let slider = InternalSlider()
     
-
+    weak var delegate: VSSliderDelegate?
     // If orientation of slider should be vertical or horizontal. Default is true.
     @IBInspectable
     public var vertical: Bool = true {
@@ -207,6 +212,8 @@ public class VSSlider: UIControl {
         initialize()
     }
     
+    
+    
     // MARK: - Slider Tap Gesture Handling
     @objc func sliderTapped(gestureRecognizer: UIGestureRecognizer) {
         
@@ -218,7 +225,7 @@ public class VSSlider: UIControl {
 
                 // Update the slider value
                 slider.setValue(updatedValue, animated: true)
-
+                delegate?.sliderValueChanged(newValue: slider.value)
                 // Notify value change to the target
                 sendActions(for: .valueChanged)
     }
@@ -227,7 +234,7 @@ public class VSSlider: UIControl {
 
       @objc private func sliderPanned(_ gestureRecognizer: UIPanGestureRecognizer) {
           switch gestureRecognizer.state {
-          case .changed, .began:
+          case .changed, .began, .recognized, .possible:
               // Calculate the value based on the pan location
               let pointPanned: CGPoint = gestureRecognizer.location(in: slider)
               let value = pointPanned.x / slider.bounds.size.width
@@ -235,7 +242,7 @@ public class VSSlider: UIControl {
 
               // Update the slider value
               slider.setValue(updatedValue, animated: true)
-
+              delegate?.sliderValueChanged(newValue: slider.value)
               // Notify value change to the target
               sendActions(for: .valueChanged)
 
@@ -248,11 +255,10 @@ public class VSSlider: UIControl {
         updateSlider()
         addSubview(slider)
         slider.isUserInteractionEnabled = true
-     
+        slider.delegate = self
         let extendedView = ExtendedTouchAreaView(frame: CGRect(x: 50, y: 50, width: 100, height: 100))
         extendedView.backgroundColor = UIColor.blue
         self.slider.addSubview(extendedView)
-
         
        //  Add a gesture recognizer to the slider
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(sliderTapped(gestureRecognizer:)))
@@ -296,14 +302,9 @@ public class VSSlider: UIControl {
         slider.maximumValue = maximumValue
         slider.isContinuous = isContinuous
         slider.increment = increment
-//
-//        if let thumbImage = thumbImage {
-//            slider.setThumbImage(thumbImage, for: .normal)
         
             if let thumbImage = UIImage(named: "knob1") {
                 slider.setThumbImage(thumbImage, for: .normal)
-                
-                
         } else if let thumbTintColor = thumbTintColor {
             slider.thumbTintColor = thumbTintColor
         }
@@ -432,18 +433,21 @@ public class VSSlider: UIControl {
     }
 }
 
+extension VSSlider: InternalSliderDelegate {
+    func draggingDidChange() {
+        self.delegate?.sliderValueChanged(newValue: slider.value)
+    }
+}
+
 
 import UIKit
 
 class ExtendedTouchAreaView: UIView {
-    
+
     private let touchAreaInsets = UIEdgeInsets(top: -20, left: -20, bottom: -20, right: -20)
-    
+
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         let expandedBounds = bounds.inset(by: touchAreaInsets)
         return expandedBounds.contains(point)
     }
-    
-    // Your other custom code goes here
-    
 }

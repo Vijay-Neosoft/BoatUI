@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct SoundPresetModel {
+    let id : Int
+    let name : String
+    var isSelected : Bool
+}

@@ -6,11 +6,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Metropolis-Regular.otf">
-            <string>Metropolis-Regular</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,14 +16,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="123" height="38"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-5A-y4V">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-5A-y4V">
                         <rect key="frame" x="0.0" y="0.0" width="123" height="38"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="38" id="NTK-4s-pGq"/>
                             <constraint firstAttribute="width" constant="123" id="W8o-kO-Twh"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal">
                             <attributedString key="attributedTitle">
@@ -42,6 +37,7 @@
                                 </fragment>
                             </attributedString>
                         </state>
+                        <buttonConfiguration key="configuration" style="plain"/>
                         <connections>
                             <action selector="presetButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="CxH-ur-bOw"/>
                         </connections>
@@ -49,7 +45,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="XVk-5A-y4V" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3nH-20-JdZ"/>
                 <constraint firstItem="XVk-5A-y4V" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="R1f-l3-fbA"/>

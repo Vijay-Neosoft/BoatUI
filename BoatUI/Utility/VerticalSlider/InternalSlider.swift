@@ -7,10 +7,14 @@
 
 import UIKit
 
+protocol InternalSliderDelegate: AnyObject {
+    func draggingDidChange()
+}
+
 class InternalSlider: UISlider {
 
     var increment: Float = 0
-    
+    weak var delegate: InternalSliderDelegate?
     var roundedValue: Float {
         get {
             return round(super.value, to: increment)
@@ -36,17 +40,25 @@ class InternalSlider: UISlider {
     private func initialize() {
         addTarget(self, action: #selector(endSliding), for: .touchUpInside)
         addTarget(self, action: #selector(endSliding), for: .touchUpOutside)
+        addTarget(self, action: #selector(touchDragInside), for: .touchDragInside)
     }
     
     @objc private func endSliding() {
-        setValue(round(super.value, to: increment), animated: true)
+        setValue(super.value, animated: true)
         sendActions(for: .valueChanged)
     }
+    @objc private func touchDragInside() {
+        setValue(super.value, animated: true)
+        sendActions(for: .valueChanged)
+        self.delegate?.draggingDidChange()
+    }
+
 }
 
 fileprivate func round(_ value: Float, to increment: Float) -> Float {
     if increment == 0 {
         return value
     }
+    
     return increment * Float(round(value / increment))
 }

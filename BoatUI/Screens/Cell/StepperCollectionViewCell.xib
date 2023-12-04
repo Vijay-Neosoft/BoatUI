@@ -25,17 +25,6 @@
                         <rect key="frame" x="16" y="16" width="388" height="171"/>
                         <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.30480456350000001" green="0.67307364940000003" blue="0.4980167747" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                <real key="value" value="-20"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                <real key="value" value="20"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="increment">
-                                <real key="value" value="10"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNz-BQ-rgJ">
                         <rect key="frame" x="204" y="203" width="12" height="21"/>
@@ -68,7 +57,7 @@
     </objects>
     <designables>
         <designable name="KFo-Ux-dAh">
-            <size key="intrinsicContentSize" width="30" height="-1"/>
+            <size key="intrinsicContentSize" width="30" height="165"/>
         </designable>
     </designables>
 </document>
