@@ -8,7 +8,7 @@
 import UIKit
 
 enum calibrationImages: CaseIterable {
-
+    
     case turnLeft
     case turnRight
     case tiltLeft
@@ -24,6 +24,12 @@ enum calibrationImages: CaseIterable {
         case .turnUp: return "TurnUp"
         }
     }
+    
+    
+}
+fileprivate struct cellIdentifier {
+    
+    static let  CalibrationCollectionViewCellldentifier  = "CalibrationCollectionViewCell"
 }
 
 class CalibrationViewController: UIViewController {
@@ -32,54 +38,59 @@ class CalibrationViewController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
-    let calibrationNameArray = ["TurnLeft","TurnRight","TiltLeft","TiltRight","TurnUp"]
+    let calibrationNameArray = ["Turn Left","Turn Right","Tilt Left","Tilt Right","Turn Up"]
     var isButtonClicked = true
     var currentIndex = 0
     var currentStack = 0 {
         didSet {
-                calibrationCollectionView.isPagingEnabled = false
-                calibrationCollectionView.scrollToItem(at: IndexPath(item: currentStack, section: 0), at: .right, animated: true)
+            calibrationCollectionView.isPagingEnabled = false
+            calibrationCollectionView.scrollToItem(at: IndexPath(item: currentStack, section: 0), at: .right, animated: true)
             calibrationCollectionView.isPagingEnabled = true
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-   
         setUpOfCollectionViewCell()
+        navigationBarSetup()
+    }
+    
+    func navigationBarSetup(){
+        self.title = "Calibration"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     func setUpOfCollectionViewCell(){
         
-        let nib = UINib(nibName: "CalibrationCollectionViewCell", bundle: nil)
-        calibrationCollectionView.register(nib, forCellWithReuseIdentifier: "CalibrationCollectionViewCell")
-        
+        let nib = UINib(nibName: cellIdentifier.CalibrationCollectionViewCellldentifier, bundle: nil)
+        calibrationCollectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier.CalibrationCollectionViewCellldentifier)
         calibrationCollectionView.dataSource = self
         calibrationCollectionView.delegate = self
         DispatchQueue.main.async {
             self.calibrationCollectionView.reloadData()
         }
-      
-        
     }
     
     @IBAction func nextButtonPressed(sender: UIButton){
         
         if currentStack < (calibrationImages.allCases.count - 1) {
             self.currentIndex += 1
-        }
-        else {
-            self.currentStack = 0
-            self.currentIndex = 0
+        } else {
+            let headVC = storyboard?.instantiateViewController(withIdentifier: "headTrackingViewController") as! HeadTrackingViewController
+            navigationController?.pushViewController(headVC, animated: true)
         }
         if self.currentIndex % 2 != 0{
             nextButton.backgroundColor = .red
+            nextButton.tintColor = .white
         }else {
             nextButton.backgroundColor = .gray
-            self.currentStack = currentStack + 1
+            nextButton.tintColor = .black
+            if currentStack < (calibrationImages.allCases.count - 1) {
+                self.currentStack = currentStack + 1
+            }
         }
-   }
-    @IBAction func backButtonAction(_ sender: UIButton) {
     }
+    
 }
 
 extension CalibrationViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
@@ -90,7 +101,7 @@ extension CalibrationViewController: UICollectionViewDelegate,UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = calibrationCollectionView.dequeueReusableCell(withReuseIdentifier: "CalibrationCollectionViewCell", for: indexPath) as! CalibrationCollectionViewCell
+        let cell = calibrationCollectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier.CalibrationCollectionViewCellldentifier, for: indexPath) as! CalibrationCollectionViewCell
         
         cell.calibrationImage.image = UIImage(named: calibrationImages.allCases[indexPath.item].description)
         cell.calibrationLabel.text = calibrationNameArray[indexPath.item]

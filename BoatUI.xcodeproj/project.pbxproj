@@ -23,6 +23,7 @@
 		92B15BBF2B15EFD60009255D /* MutableCollection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B15BBE2B15EFD60009255D /* MutableCollection+Extension.swift */; };
 		92B15BC72B15F23E0009255D /* SoundSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B15BC62B15F23E0009255D /* SoundSettingViewModel.swift */; };
 		92B15BC92B15F26C0009255D /* SoundPresetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B15BC82B15F26C0009255D /* SoundPresetModel.swift */; };
+		92B744172B1EF314001EE2F4 /* HeadTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B744162B1EF314001EE2F4 /* HeadTrackingViewController.swift */; };
 		92BD30E82B1DB41C00057949 /* CalibrationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD30E62B1DB41C00057949 /* CalibrationCollectionViewCell.swift */; };
 		92BD30E92B1DB41C00057949 /* CalibrationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92BD30E72B1DB41C00057949 /* CalibrationCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,11 @@
 		92B15BBE2B15EFD60009255D /* MutableCollection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MutableCollection+Extension.swift"; sourceTree = "<group>"; };
 		92B15BC62B15F23E0009255D /* SoundSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSettingViewModel.swift; sourceTree = "<group>"; };
 		92B15BC82B15F26C0009255D /* SoundPresetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPresetModel.swift; sourceTree = "<group>"; };
+		92B744162B1EF314001EE2F4 /* HeadTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTrackingViewController.swift; sourceTree = "<group>"; };
+		92B744182B1F1B6B001EE2F4 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../Downloads/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		92B744192B1F1D37001EE2F4 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.ttf"; path = "../../../../../Downloads/Montserrat (1)/static/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		92B7441A2B1F1E1D001EE2F4 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-SemiBold.ttf"; path = "../../../../../Downloads/Montserrat (1)/static/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		92B7441B2B1F2153001EE2F4 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-ExtraBold.ttf"; path = "../../../../../Downloads/Inter/static/Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
 		92BD30E62B1DB41C00057949 /* CalibrationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationCollectionViewCell.swift; sourceTree = "<group>"; };
 		92BD30E72B1DB41C00057949 /* CalibrationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalibrationCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,7 +133,11 @@
 		92B15BB32B15C65E0009255D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				92B744192B1F1D37001EE2F4 /* Montserrat-Medium.ttf */,
+				92B7441B2B1F2153001EE2F4 /* Inter-ExtraBold.ttf */,
+				92B7441A2B1F1E1D001EE2F4 /* Montserrat-SemiBold.ttf */,
 				92B15BB42B15C6650009255D /* Metropolis-Regular.otf */,
+				92B744182B1F1B6B001EE2F4 /* Roboto-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -181,6 +191,7 @@
 			children = (
 				92B15B952B148C860009255D /* SoundSettingViewController.swift */,
 				92792E672B1D9FA8004A936C /* CalibrationViewController.swift */,
+				92B744162B1EF314001EE2F4 /* HeadTrackingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +278,7 @@
 				92B15BAD2B14B6240009255D /* VerticalSlider.swift in Sources */,
 				92B15BBF2B15EFD60009255D /* MutableCollection+Extension.swift in Sources */,
 				92B15BC72B15F23E0009255D /* SoundSettingViewModel.swift in Sources */,
+				92B744172B1EF314001EE2F4 /* HeadTrackingViewController.swift in Sources */,
 				92B15B922B148C860009255D /* AppDelegate.swift in Sources */,
 				92BD30E82B1DB41C00057949 /* CalibrationCollectionViewCell.swift in Sources */,
 				92B15B942B148C860009255D /* SceneDelegate.swift in Sources */,
