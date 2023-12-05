@@ -254,7 +254,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLP-vT-Ki8">
-                                <rect key="frame" x="101.66666666666669" y="159" width="190" height="275"/>
+                                <rect key="frame" x="101.66666666666669" y="240" width="190" height="275"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gwg-JV-QR0">
                                         <rect key="frame" x="0.0" y="0.0" width="190" height="275"/>
@@ -315,10 +315,10 @@
                             <constraint firstItem="mVL-GX-uH6" firstAttribute="bottom" secondItem="vHJ-Ej-IzB" secondAttribute="bottom" constant="31" id="B7D-6T-Jqs"/>
                             <constraint firstItem="vHJ-Ej-IzB" firstAttribute="leading" secondItem="8R4-A3-YRO" secondAttribute="leading" id="Gjc-LQ-yd5"/>
                             <constraint firstItem="8R4-A3-YRO" firstAttribute="leading" secondItem="gLP-vT-Ki8" secondAttribute="leading" id="Rjq-JU-Vhf"/>
+                            <constraint firstItem="gLP-vT-Ki8" firstAttribute="centerX" secondItem="mVL-GX-uH6" secondAttribute="centerX" id="Sgf-bA-E0d"/>
                             <constraint firstItem="vHJ-Ej-IzB" firstAttribute="trailing" secondItem="8R4-A3-YRO" secondAttribute="trailing" id="Ubb-yd-c1u"/>
+                            <constraint firstItem="gLP-vT-Ki8" firstAttribute="centerY" secondItem="mVL-GX-uH6" secondAttribute="centerY" multiplier="0.82" id="ZHf-vZ-CI9"/>
                             <constraint firstItem="vHJ-Ej-IzB" firstAttribute="top" secondItem="8R4-A3-YRO" secondAttribute="bottom" constant="31" id="gdM-zC-O8S"/>
-                            <constraint firstItem="gLP-vT-Ki8" firstAttribute="top" secondItem="mVL-GX-uH6" secondAttribute="top" constant="56" id="sLv-Sg-p91"/>
-                            <constraint firstItem="gLP-vT-Ki8" firstAttribute="centerX" secondItem="czk-vX-8OF" secondAttribute="centerX" id="w27-2l-vWk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wsT-An-cYA">
