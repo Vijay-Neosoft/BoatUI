@@ -274,14 +274,13 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="5Vy-wr-vv0"/>
                                     <constraint firstItem="Gwg-JV-QR0" firstAttribute="leading" secondItem="gLP-vT-Ki8" secondAttribute="leading" id="7Lz-5U-w00"/>
-                                    <constraint firstItem="Gwg-JV-QR0" firstAttribute="top" secondItem="gLP-vT-Ki8" secondAttribute="top" id="GkZ-2g-Isy"/>
                                     <constraint firstAttribute="bottom" secondItem="Gwg-JV-QR0" secondAttribute="bottom" id="bsT-Za-Rqb"/>
                                     <constraint firstAttribute="height" constant="275" id="erX-zT-fc2"/>
                                     <constraint firstAttribute="trailing" secondItem="Gwg-JV-QR0" secondAttribute="trailing" id="woG-wK-wwq"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8R4-A3-YRO">
-                                <rect key="frame" x="101.66666666666669" y="565" width="190" height="48"/>
+                                <rect key="frame" x="101.66666666666669" y="660" width="190" height="48"/>
                                 <color key="backgroundColor" red="0.32549019607843138" green="0.30588235294117649" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="71V-ui-z3W"/>
@@ -299,7 +298,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHJ-Ej-IzB">
-                                <rect key="frame" x="101.66666666666669" y="644" width="190" height="48"/>
+                                <rect key="frame" x="101.66666666666669" y="739" width="190" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="fbE-gu-xUD"/>
@@ -313,12 +312,12 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8R4-A3-YRO" firstAttribute="trailing" secondItem="gLP-vT-Ki8" secondAttribute="trailing" id="6r0-9r-zZK"/>
+                            <constraint firstItem="mVL-GX-uH6" firstAttribute="bottom" secondItem="vHJ-Ej-IzB" secondAttribute="bottom" constant="31" id="B7D-6T-Jqs"/>
                             <constraint firstItem="vHJ-Ej-IzB" firstAttribute="leading" secondItem="8R4-A3-YRO" secondAttribute="leading" id="Gjc-LQ-yd5"/>
                             <constraint firstItem="8R4-A3-YRO" firstAttribute="leading" secondItem="gLP-vT-Ki8" secondAttribute="leading" id="Rjq-JU-Vhf"/>
                             <constraint firstItem="vHJ-Ej-IzB" firstAttribute="trailing" secondItem="8R4-A3-YRO" secondAttribute="trailing" id="Ubb-yd-c1u"/>
-                            <constraint firstItem="8R4-A3-YRO" firstAttribute="top" secondItem="gLP-vT-Ki8" secondAttribute="bottom" constant="131" id="Vc2-Wu-3dl"/>
                             <constraint firstItem="vHJ-Ej-IzB" firstAttribute="top" secondItem="8R4-A3-YRO" secondAttribute="bottom" constant="31" id="gdM-zC-O8S"/>
-                            <constraint firstItem="gLP-vT-Ki8" firstAttribute="top" secondItem="mVL-GX-uH6" secondAttribute="top" constant="56" id="vJ2-gN-PbD"/>
+                            <constraint firstItem="gLP-vT-Ki8" firstAttribute="top" secondItem="mVL-GX-uH6" secondAttribute="top" constant="56" id="sLv-Sg-p91"/>
                             <constraint firstItem="gLP-vT-Ki8" firstAttribute="centerX" secondItem="czk-vX-8OF" secondAttribute="centerX" id="w27-2l-vWk"/>
                         </constraints>
                     </view>
@@ -448,6 +447,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" shadowImage=" " backIndicatorImage=" " id="Txn-Vv-lcn">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

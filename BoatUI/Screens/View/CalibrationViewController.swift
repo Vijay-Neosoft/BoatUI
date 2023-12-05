@@ -53,6 +53,10 @@ class CalibrationViewController: UIViewController {
         super.viewDidLoad()
         setUpOfCollectionViewCell()
         navigationBarSetup()
+        
+        if #available(iOS 11.0, *) {
+            additionalSafeAreaInsets.bottom = 0
+        }
     }
     
     func navigationBarSetup(){
